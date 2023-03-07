@@ -74,4 +74,48 @@ void seqQueue<elemType>::doubleSpace() {
 } 
 
 // ***********************************************************************
-// 循环队列
+// 链队列
+template <class eleT>
+class linkQueue: public queue<eleT> {
+    private:
+        struct node {
+            eleT  data;
+            node *next;
+            node(const eleT &x, node *N = NULL){data = x; next = N;}
+            node():next(NULL) {}
+            ~node() {}
+        };
+        node *front, *rear; 
+    public:
+        linkQueue() { front = rear = NULL; }
+        // 析构函数，和链表的析构函数类似
+        ~linkQueue();      
+        bool isEmpty() { return front ==  NULL; }
+        void enQueue(const eleT &x);
+        eleT deQueue();	  
+        eleT getHead() { return front->data; }  
+};  
+
+// enQueue函数 尾插入
+template <class eleT>
+void linkQueue<eleT>::enQueue(const eleT &x){
+    if(rear == NULL){
+        front = rear = new node(x);
+    }
+    else {
+        rear = rear->next = new node(x);
+    }
+}
+
+// deQueue 头输出
+template <class eleT>
+void linkQueue<eleT>::deQueue(){
+    node *tmp = front;
+    eleT value = front->data;
+    // 删除
+    front = front->next;
+    delete tmp;
+    // 判断是否为空
+    if(front == NULL) rear = NULL;
+    return value;
+}
