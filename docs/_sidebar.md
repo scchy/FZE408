@@ -7,3 +7,6 @@
 * [数据结构：2- 线性表](zh-cn/struct/2-线性表.md)
 * [数据结构：3- 栈和队列](zh-cn/struct/3-栈和队列.md)
 * [数据结构：4- 字符串](zh-cn/struct/4-字符串.md)
+* [数据结构：5- 树](zh-cn/struct/5-树.md)
+* [数据结构：6- 优先队列](zh-cn/struct/6-优先队列.md)
+
