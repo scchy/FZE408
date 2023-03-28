@@ -9,4 +9,6 @@
 * [数据结构：4- 字符串](zh-cn/struct/4-字符串.md)
 * [数据结构：5- 树](zh-cn/struct/5-树.md)
 * [数据结构：6- 优先队列](zh-cn/struct/6-优先队列.md)
+* [数据结构：7- 图](zh-cn/struct/7-图.md)
+
 
